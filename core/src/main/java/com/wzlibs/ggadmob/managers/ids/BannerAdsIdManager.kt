@@ -1,7 +1,7 @@
 package com.wzlibs.ggadmob.managers.ids
 
 import android.content.Context
-import com.wzlibs.base.R
+import com.wzlibs.core.R
 
 class BannerAdsIdManager(private val context: Context) : AdsIdManager(context) {
     override val debugId: String

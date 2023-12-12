@@ -1,7 +1,7 @@
 package com.wzlibs.ggadmob.managers.ids
 
 import android.content.Context
-import com.wzlibs.base.R
+import com.wzlibs.core.R
 
 class RewardInterstitialAdsIdManager(private val context: Context) :
     MediationAdsIdManager(context) {

@@ -1,11 +1,13 @@
 package com.wzlib.coresource
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import com.wzlib.coresource.databinding.ActivityMainBinding
+import com.wzlibs.core.CoreActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+@AndroidEntryPoint
+class MainActivity : CoreActivity<ActivityMainBinding>() {
+
+    override fun bindingView(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
     }
 }

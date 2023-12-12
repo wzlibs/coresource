@@ -4,10 +4,14 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'dagger.hilt.android.plugin'
+    id 'maven-publish'
 }
 
+group = 'com.github.wzlibs'
+version = '1.0.2'
+
 android {
-    namespace 'com.wzlibs.core'
+    namespace 'com.github.wzlibs'
     compileSdk 33
 
     defaultConfig {
@@ -51,4 +55,18 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-process:2.6.2")
     kapt ("androidx.lifecycle:lifecycle-common-java8:2.6.2")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.wzlibs'
+                artifactId = 'coresource'
+                version = '1.0.2'
+            }
+        }
+    }
 }

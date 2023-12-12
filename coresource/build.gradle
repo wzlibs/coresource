@@ -8,7 +8,7 @@ plugins {
 }
 
 group = 'com.github.wzlibs'
-version = '1.0.2'
+version = '1.0.3'
 
 android {
     namespace 'com.github.wzlibs'
@@ -65,7 +65,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.wzlibs'
                 artifactId = 'coresource'
-                version = '1.0.2'
+                version = '1.0.3'
             }
         }
     }

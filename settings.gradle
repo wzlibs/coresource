@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoreSource"
 include ':app'
-include ':core'
+include ':coresource'
